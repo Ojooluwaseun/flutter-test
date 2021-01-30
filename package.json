@@ -5,6 +5,10 @@
   "main": "server.js",
   "author": "Oluwaseun Ojo",
   "license": "ISC",
+  "engines": {
+    "node": "12.16.1",
+    "npm": "6.13.4"
+  },
   "scripts": {
     "start": "SET NODE_ENV=production & node server",
     "dev": "nodemon server",
