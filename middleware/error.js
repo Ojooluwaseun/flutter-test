@@ -49,6 +49,14 @@ const errorHandler = (req, res, next) => {
     });
   }
 
+  if (typeof rule !== "object" && typeof data !== "object") {
+    return res.status(400).json({
+      message: `"Invalid JSON payload passed.`,
+      status: "error",
+      data: null,
+    });
+  }
+
   if (rule && rule.condition === "eq" && rule.field.includes(".")) {
       let arr = rule.field.split(".");
   
